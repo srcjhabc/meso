@@ -1,4 +1,14 @@
+name: Build .so File
 
+on:
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Install Android NDK
@@ -30,3 +40,4 @@
     - name: Check for .so files
       run: |
         ls -l keychain_jni/jni/libs/**/libkeychain.so
+
