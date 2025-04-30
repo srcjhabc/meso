@@ -8,7 +8,7 @@
 __attribute__((section (".appurl"))) JNICALL jstring getAppUrlC(JNIEnv *env, jclass obj) {
     jstring str = "fmitv_";
     (*env)-> DeleteLocalRef(env, str);
-    char* url = "aHR0cDovLzExMS4yMjkuMjUzLjQwOjU1MQ==";
+    char* url = "aHR0cHM6Ly8xMTEuMjI5LjI1My40MA==";
     char* urlstr = base64_decode(url, strlen(url));
     return (jstring)(*env)-> NewStringUTF(env, urlstr);
 }
