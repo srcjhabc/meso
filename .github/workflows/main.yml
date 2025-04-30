@@ -28,7 +28,7 @@ jobs:
         ls -R libs  # 列出 libs 目录下的所有文件
 
     - name: Upload .so files
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: my-library
         path: |
