@@ -8,14 +8,14 @@
 __attribute__((section (".appurl"))) JNICALL jstring getAppUrlC(JNIEnv *env, jclass obj) {
     jstring str = "fmitv_";
     (*env)-> DeleteLocalRef(env, str);
-    char* url = "aHR0cHM6Ly8xMTEuMjI5LjI1My40MA==";
+    char* url = "aHR0cDovLzExMS4yMjkuMjUzLjQwOjU2MQ==";
     char* urlstr = base64_decode(url, strlen(url));
     return (jstring)(*env)-> NewStringUTF(env, urlstr);
 }
 
 __attribute__((section (".appsign"))) JNICALL jstring getAppSignC(JNIEnv *env, jclass obj) {
     //^u%dFUQXi%7jwyS$wo4TfGQd!XGRibrL89nBt$xBBMPG&Dv*rAOV268SXG1%D7lF0kW1cyRzYTE8Qa3rqS#reaHXB3*&tJLm9fy@S6svg&etMqcbADqoovN3g0WKPk9&
-    char* sign = "XnUlZEZVUVhpJTdqd3lTJHdvNFRmR1FkIVhHUmlickw4OW5CdCR4QkJNUEcmRHYqckFPVjI2OFNYRzElRDdsRjBrVzFjeVJ6WVRFOFFhM3JxUyNyZWFIWEIzKiZ0SkxtOWZ5QFM2c3ZnJmV0TXFjYkFEcW9vdk4zZzBXS1BrOSY=";
+    char* sign = "XnUlZEZVUVhpJTdqd3lTJHdvNFRmR1FkIVhHUmlickw4OW5CdCR4QkJNUEcmRHYqckFPVjI2OFNYRzElRDdsRjBrVzFjeVJ6WVRFOFFhM3JxUyNyZWFIWEIzKiZ0SkxtOWZ5QFM2c3ZnJmV0TXFjYkFEcW9vdk4zZzBXS1BrOSbNnA==";
     char* signstr = base64_decode(sign, strlen(sign));
     return (jstring)(*env)-> NewStringUTF(env, signstr);
 }
